@@ -13,7 +13,6 @@ class RemoteRepository {
                 if ( response.isSuccessful)
                     returnOnSuccess(response.body()!!)
             }
-
             override fun onFailure(call: Call<Characters>, t: Throwable) {
                 returnOnFailure(t.message?:"Unknown Error")
             }

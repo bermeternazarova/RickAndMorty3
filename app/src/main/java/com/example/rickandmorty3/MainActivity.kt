@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-
         change()
         setContentView(binding.root)
     }
@@ -19,5 +18,4 @@ class MainActivity : AppCompatActivity() {
     private fun change() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.light_sea_green)))
-    }
-}
+    }}

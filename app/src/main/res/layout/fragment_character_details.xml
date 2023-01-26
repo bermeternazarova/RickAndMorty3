@@ -14,7 +14,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/rick"
         android:layout_width="146dp"
         android:layout_height="148dp"/>
     <TextView
@@ -36,10 +35,10 @@
         app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="@string/rick_sanchez"
         android:gravity="center"
-        android:textSize="32sp"
+        android:textSize="22sp"
         android:textColor="@color/black"/>
     <TextView
         android:id="@+id/tv_gender"
@@ -52,7 +51,7 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="15dp"/>
     <TextView
         android:id="@+id/tv_status"
         android:layout_width="wrap_content"

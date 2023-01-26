@@ -21,7 +21,9 @@ class AdapterCharacters(private var characters: Characters,private var onClick:(
     override fun getItemCount(): Int {
     return characters.results.size
     }
-
+    fun getInfo(pos :Int):Result{
+     return characters.results[pos]
+    }
     inner  class ViewHolderCharacters(private var binding: ItemCharactersBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(result: Result) {
             Log.e("adapter", "bind: $result")
@@ -29,7 +31,7 @@ class AdapterCharacters(private var characters: Characters,private var onClick:(
             binding.tvSpecies.text = result.species
             binding.ivOfHeroes.glide(result.image)
             itemView.setOnClickListener{
-                onClick(result.id)
+                onClick(adapterPosition)
             }
         }
     }

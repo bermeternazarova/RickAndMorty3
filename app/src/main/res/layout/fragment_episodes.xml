@@ -6,6 +6,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.EpisodesFragment">
+    <TextView
+        android:id="@+id/tv_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_back"
+        android:layout_marginStart="40dp"
+        android:text="@string/go_back2"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
     <ImageView
         android:id="@+id/iv_episode"
         android:layout_width="174dp"
@@ -13,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="46dp"
         android:background="@drawable/episodes_rick"
         android:contentDescription="@string/iv_episode"/>
     <EditText
@@ -22,7 +34,6 @@
         android:layout_height="56dp"
         android:background="@drawable/bg_circle"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="44dp"
         android:hint="@string/name_of_episode"
         android:drawableStart="@drawable/ic_search"
         android:paddingHorizontal="3dp"
@@ -31,12 +42,27 @@
         app:layout_constraintTop_toBottomOf="@id/iv_episode"
         android:importantForAutofill="no"
         android:inputType="text"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="312dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_anim"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_filter"
+        app:lottie_rawRes="@raw/morty_cry"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_filter"/>
+        app:layout_constraintTop_toBottomOf="@id/lottie_anim"
+        android:text="@string/lottie_text"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/light_sea_green1"
+        android:layout_marginTop="5dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
